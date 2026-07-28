@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Best Friend Quiz</title>
+
+<title>Best Friend Quiz 💖</title>
 
 <style>
+
 body{
-    font-family:Arial,sans-serif;
     background:#ffe6f2;
+    font-family:Arial,sans-serif;
     text-align:center;
     padding:30px;
 }
@@ -17,11 +19,18 @@ body{
     margin:auto;
     padding:25px;
     border-radius:20px;
-    box-shadow:0 5px 15px rgba(255,105,180,0.3);
+    box-shadow:0 5px 15px #ffb6d9;
 }
 
 h1{
     color:#ff1493;
+}
+
+.question{
+    margin:20px;
+    padding:15px;
+    background:#fff0f7;
+    border-radius:15px;
 }
 
 button{
@@ -36,11 +45,13 @@ button{
 }
 
 #result{
-    margin-top:20px;
+    color:#ff1493;
     font-size:22px;
     font-weight:bold;
 }
+
 </style>
+
 </head>
 
 <body>
@@ -49,33 +60,59 @@ button{
 
 <h1>💖 Best Friend Quiz 💖</h1>
 
-<h2>Question 1</h2>
-
-<p>Who is the world's best friend? 😊</p>
-
+<div class="question">
+<p>1. Who is my forever best friend? 😊</p>
 <button onclick="correct()">You ❤️</button>
-<button onclick="wrong()">Someone Else</button>
+<button onclick="wrong()">Someone else</button>
+</div>
+
+<div class="question">
+<p>2. Our friendship is?</p>
+<button onclick="correct()">Forever ♾️</button>
+<button onclick="wrong()">Temporary</button>
+</div>
+
+<div class="question">
+<p>3. Who makes life more beautiful?</p>
+<button onclick="correct()">My Best Friend 🌸</button>
+<button onclick="wrong()">Nobody</button>
+</div>
+
+<div class="question">
+<p>4. Our memories are?</p>
+<button onclick="correct()">Priceless 💎</button>
+<button onclick="wrong()">Normal</button>
+</div>
+
+<div class="question">
+<p>5. Will we always stay friends?</p>
+<button onclick="correct()">Always ❤️</button>
+<button onclick="wrong()">Never</button>
+</div>
 
 <p id="result"></p>
 
-<br>
-
-<button onclick="nextPage()">Next ➜</button>
+<button onclick="nextPage()">Next Adventure ➜</button>
 
 </div>
 
+
 <script>
+
 function correct(){
-    document.getElementById("result").innerHTML="🎉 Correct! You know me so well ❤️";
+document.getElementById("result").innerHTML=
+"🎉 Correct! You are my Forever Best Friend ❤️";
 }
 
 function wrong(){
-    document.getElementById("result").innerHTML="😜 Oops! Try Again.";
+document.getElementById("result").innerHTML=
+"😜 Try Again!";
 }
 
 function nextPage(){
-    window.location.href="page8.html";
+window.location.href="page8.html";
 }
+
 </script>
 
 </body>
