@@ -13,15 +13,15 @@ body{
   padding:30px;
 }
 
-.letter{
-  background:#fff3cd;
-  color:#181717;
-  padding:30px;
-  border-radius:20px;
-  max-width:600px;
-  margin:auto;
-  font-size:18px;
-  line-height:1.6;
+#letter{
+    font-size:22px;
+    line-height:1.8;
+    color:#444;
+    white-space:pre-line;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px #ffb6d9;
 }
 
 h1{
@@ -38,29 +38,7 @@ h1{
 
 <h1>💌 Secret Friendship Letter</h1>
 
-<p>
-Dear Best Friend ❤️,
-</p>
-
-<p>
-Some people enter our life and make ordinary moments special.
-You are one of those precious people who bring smiles, happiness
-and beautiful memories.
-</p>
-
-<p>
-Thank you for every laugh, every secret, every support and every
-unforgettable moment. Our friendship is a special chapter that I
-will always treasure. ✨
-</p>
-
-<p>
-No matter how much time passes, this bond will always stay special. 💖
-</p>
-
-<p>
-With lots of love ❤️
-</p>
+<p id="letter"></p>
 
 </div>
 <br>
@@ -73,6 +51,34 @@ Open Friendship Gallery 📸
 function openGallery(){
   window.location.href = "page5.html";
 }
+<script>
+
+const text = `Dear Best Friend,
+
+Thank you for always being there for me. ❤️
+
+Every smile, every laugh and every memory with you is a treasure.
+
+No matter where life takes us, our friendship will always stay strong.
+
+Happy Friendship Day! 🌸
+
+Forever Friends... ♾️💖`;
+
+let i = 0;
+
+function typeLetter() {
+    if (i < text.length) {
+        document.getElementById("letter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeLetter, 45);
+    }
+}
+
+window.onload = typeLetter;
+
+</script>
+
 </script>
 
 </body>
