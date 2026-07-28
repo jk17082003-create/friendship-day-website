@@ -3,53 +3,111 @@
 
 <head>
 
-<title>Best Friend Award 🏆</title>
+<title>🏆 Best Friend Award & Certificate</title>
 
 <style>
 
 body{
-    background:#fff5cc;
+    margin:0;
+    padding:30px;
     font-family:Arial,sans-serif;
     text-align:center;
-    padding:30px;
+    background:linear-gradient(135deg,#ffe6f2,#fff7fb);
 }
 
+/* Floating Hearts */
+
+.heart{
+    position:fixed;
+    top:-10%;
+    font-size:25px;
+    animation:fall 8s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Award Card */
+
 .award{
-    max-width:600px;
+    max-width:700px;
     margin:auto;
     background:white;
     padding:30px;
     border-radius:25px;
-    border:5px solid #ffd700;
-    box-shadow:0 5px 20px #e6c300;
+    border:5px solid gold;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.trophy{
+    font-size:80px;
 }
 
 h1{
-    color:#d4a000;
-    font-size:40px;
+    color:#ff1493;
 }
 
 h2{
-    color:#ff1493;
+    color:#d63384;
 }
 
 p{
     font-size:20px;
     color:#444;
+    line-height:1.7;
 }
 
-.trophy{
-    font-size:70px;
+/* Certificate */
+
+.certificate{
+    margin-top:40px;
+    background:#fffdf7;
+    border:8px solid #ff69b4;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 8px 25px rgba(255,105,180,.3);
+}
+
+.certificate h1{
+    color:#ff1493;
+    margin:15px 0;
+}
+
+.certificate h2{
+    color:#c2185b;
+}
+
+.signature{
+    margin-top:25px;
+    font-size:24px;
+    color:#ff1493;
+    font-weight:bold;
 }
 
 button{
+    margin-top:30px;
     background:#ff1493;
     color:white;
     border:none;
-    padding:15px 30px;
+    padding:15px 35px;
     border-radius:30px;
     font-size:18px;
     cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff3399;
+    transform:scale(1.05);
 }
 
 </style>
@@ -66,28 +124,70 @@ button{
 
 <h2>Presented To ❤️</h2>
 
-<h1>My Best Friend</h1>
+<h1>🌸 My Best Friend 🌸</h1>
 
 <p>
 For being the most caring, supportive and amazing person in my life.
 </p>
 
 <p>
-✨ For unlimited laughter<br>
-✨ For beautiful memories<br>
-✨ For always being there
+✨ Unlimited Laughter<br>
+✨ Beautiful Memories<br>
+✨ Endless Support<br>
+✨ Unbreakable Friendship
 </p>
 
 <h2>💖 Forever Friends ♾️</h2>
 
-<br>
+</div>
+
+<div class="certificate">
+
+<h2>🏆 Certificate of Best Friendship 🏆</h2>
+
+<p>This Certificate is Proudly Presented To</p>
+
+<h1>🌸 My Best Friend 🌸</h1>
+
+<p>
+For filling my life with happiness,
+beautiful memories and endless smiles.
+
+<br><br>
+
+Thank you for always standing by my side.
+
+<br><br>
+
+You will always be my Forever Best Friend. ❤️
+</p>
+
+<div class="signature">
+
+Presented with ❤️ by<br>
+
+✨ Jyoti ✨
+
+</div>
+
+</div>
 
 <button onclick="nextPage()">
 🌟 Grand Finale ➜
 </button>
 
-</div>
+<!-- Floating Hearts -->
 
+<div class="heart" style="left:5%;animation-delay:0s;">💖</div>
+<div class="heart" style="left:15%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:25%;animation-delay:4s;">💗</div>
+<div class="heart" style="left:35%;animation-delay:1s;">💝</div>
+<div class="heart" style="left:45%;animation-delay:3s;">❤️</div>
+<div class="heart" style="left:55%;animation-delay:5s;">💖</div>
+<div class="heart" style="left:65%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:75%;animation-delay:6s;">💗</div>
+<div class="heart" style="left:85%;animation-delay:1s;">💝</div>
+<div class="heart" style="left:95%;animation-delay:4s;">❤️</div>
 
 <script>
 
