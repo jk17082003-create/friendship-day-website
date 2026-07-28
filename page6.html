@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Happy Friendship Day ❤️</title>
 
 <style>
+
 body{
     margin:0;
     padding:0;
     background:linear-gradient(135deg,#ffd6e7,#ffeef5);
     font-family:Arial,sans-serif;
     text-align:center;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
 .container{
-    margin-top:80px;
+    margin-top:60px;
+    padding:20px;
 }
 
 h1{
@@ -29,7 +32,7 @@ p{
 }
 
 button{
-    margin-top:25px;
+    margin-top:20px;
     padding:15px 30px;
     font-size:18px;
     border:none;
@@ -39,11 +42,48 @@ button{
     cursor:pointer;
 }
 
+button:hover{
+    background:#ff3399;
+}
+
+.gift{
+    font-size:100px;
+    cursor:pointer;
+    transition:.4s;
+    margin:30px 0;
+}
+
+.gift:hover{
+    transform:scale(1.15) rotate(10deg);
+}
+
+#giftMessage{
+    display:none;
+    background:white;
+    max-width:650px;
+    margin:20px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px #ffb6d9;
+    animation:fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 .heart{
     position:fixed;
+    top:-10%;
     font-size:25px;
     animation:fall 8s linear infinite;
-    top:-10%;
 }
 
 @keyframes fall{
@@ -54,7 +94,9 @@ button{
         transform:translateY(110vh);
     }
 }
+
 </style>
+
 </head>
 
 <body>
@@ -73,9 +115,32 @@ No matter where life takes us, our friendship will always remain special. 🌸
 
 <h2>Forever Friends ♾️</h2>
 
+<div class="gift" onclick="openGift()">
+🎁
+</div>
+
+<div id="giftMessage">
+
+<h2>💖 Surprise For You 💖</h2>
+
+<p>
+You are not just my best friend... ❤️<br><br>
+
+You are my biggest support, my happiness and one of the most beautiful blessings in my life. 🌸<br><br>
+
+✨ Thank you for every smile.<br>
+✨ Thank you for every memory.<br>
+✨ Thank you for always being there.<br><br>
+
+Happy Friendship Day! 🤗💖
+</p>
+
+</div>
+
 <button onclick="nextQuiz()">
 🧩 Continue Adventure
 </button>
+
 <button onclick="restart()">
 🔄 Restart Adventure
 </button>
@@ -89,7 +154,13 @@ No matter where life takes us, our friendship will always remain special. 🌸
 <div class="heart" style="left:80%;animation-delay:3s;">💖</div>
 
 <script>
-    function nextQuiz(){
+
+function openGift(){
+    document.getElementById("giftMessage").style.display="block";
+    document.querySelector(".gift").innerHTML="🎉";
+}
+
+function nextQuiz(){
     window.location.href="page7.html";
 }
 
@@ -100,4 +171,5 @@ function restart(){
 </script>
 
 </body>
+
 </html>
