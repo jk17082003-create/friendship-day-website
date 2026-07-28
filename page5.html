@@ -1,116 +1,277 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Friendship Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Friendship Gallery 💖</title>
 
 <style>
 
 body{
-    background:#ffe6f2;
+    margin:0;
+    padding:20px;
+    background:linear-gradient(135deg,#ffe6f2,#fff);
     font-family:Arial,sans-serif;
     text-align:center;
-    padding:20px;
 }
+
 
 h1{
     color:#ff1493;
+    font-size:35px;
+    animation:fade 1s;
 }
 
+
 .gallery{
+
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
+
 }
 
+
 .card{
+
     background:white;
     width:250px;
     padding:15px;
     border-radius:20px;
-    box-shadow:0 5px 15px rgba(255,105,180,0.3);
+    box-shadow:0 5px 20px rgba(255,20,147,.2);
+    animation:slide 1s;
 }
+
 
 .card img{
+
     width:100%;
-    height:200px;
+    height:220px;
     object-fit:cover;
     border-radius:15px;
+    cursor:pointer;
+    transition:.4s;
+
 }
 
+
+.card img:hover{
+
+    transform:scale(1.08);
+
+}
+
+
 .card p{
+
     color:#ff1493;
     font-size:18px;
     font-weight:bold;
+
 }
 
+
 button{
+
+    margin-top:30px;
+    padding:15px 35px;
     background:#ff1493;
     color:white;
     border:none;
-    padding:15px 30px;
     border-radius:30px;
-    cursor:pointer;
     font-size:18px;
-    margin-top:30px;
+    cursor:pointer;
+
 }
 
+
 button:hover{
+
     background:#e60073;
+    transform:scale(1.05);
+
+}
+
+
+/* Image Zoom Popup */
+
+#zoom{
+
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.8);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+
+}
+
+
+#zoom img{
+
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+
+}
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+@keyframes slide{
+
+from{
+transform:translateY(30px);
+opacity:0;
+}
+
+to{
+transform:translateY(0);
+opacity:1;
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+h1{
+    font-size:28px;
+}
+
+.card{
+
+    width:90%;
+
+}
+
+.card img{
+
+    height:200px;
+
+}
+
+button{
+
+    width:90%;
+
+}
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <h1>📸 Our Friendship Gallery 💖</h1>
 
+
 <div class="gallery">
 
+
 <div class="card">
-<img src="photo1.jpg" alt="Memory 1">
+<img src="photo1.jpg" onclick="zoomImage(this)">
 <p>Beautiful Memory ✨</p>
 </div>
 
+
 <div class="card">
-<img src="photo2.jpg" alt="Memory 2">
+<img src="photo2.jpg" onclick="zoomImage(this)">
 <p>Special Moment ❤️</p>
 </div>
 
+
 <div class="card">
-<img src="photo3.jpg" alt="Memory 3">
+<img src="photo3.jpg" onclick="zoomImage(this)">
 <p>Forever Memories 💖</p>
 </div>
 
+
 <div class="card">
-<img src="photo4.jpg" alt="Memory 4">
+<img src="photo4.jpg" onclick="zoomImage(this)">
 <p>Crazy Times 😄</p>
 </div>
 
+
 <div class="card">
-<img src="photo5.jpg" alt="Memory 5">
+<img src="photo5.jpg" onclick="zoomImage(this)">
 <p>Best Friendship 🌸</p>
 </div>
 
+
 <div class="card">
-<img src="photo6.jpg" alt="Memory 6">
+<img src="photo6.jpg" onclick="zoomImage(this)">
 <p>Always Together ♾️</p>
 </div>
 
+
 </div>
 
-<br>
 
-<button onclick="finalPage()">🎁 Final Surprise</button>
+<div id="zoom" onclick="closeZoom()">
+
+<img id="bigImage">
+
+</div>
+
+
+<button onclick="finalPage()">
+🎁 Final Surprise
+</button>
+
+
 
 <script>
+
 function finalPage(){
-    window.location.href="page6.html";
+
+window.location.href="page6.html";
+
 }
+
+
+function zoomImage(img){
+
+document.getElementById("zoom").style.display="flex";
+
+document.getElementById("bigImage").src=img.src;
+
+}
+
+
+function closeZoom(){
+
+document.getElementById("zoom").style.display="none";
+
+}
+
 </script>
 
+
 </body>
+
 </html>
