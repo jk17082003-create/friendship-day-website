@@ -110,6 +110,10 @@ button:hover{
     transform:scale(1.05);
 }
 
+<button onclick="downloadCertificate()">
+📥 Download Certificate
+</button>
+
 </style>
 
 </head>
@@ -193,6 +197,12 @@ Presented with ❤️ by<br>
 
 function nextPage(){
     window.location.href="page10.html";
+}
+
+function downloadCertificate(){
+
+    window.print();
+
 }
 
 </script>

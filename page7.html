@@ -50,6 +50,29 @@ button{
     font-weight:bold;
 }
 
+/* Floating Hearts */
+
+.heart{
+    position:fixed;
+    top:-10%;
+    font-size:25px;
+    animation:fall 8s linear infinite;
+    pointer-events:none;
+    z-index:999;
+}
+
+@keyframes fall{
+
+from{
+    transform:translateY(-10vh);
+}
+
+to{
+    transform:translateY(110vh);
+}
+
+}
+
 </style>
 
 </head>
@@ -115,5 +138,15 @@ window.location.href="page8.html";
 
 </script>
 
+<body>
+    <!-- Floating Hearts -->
+
+<div class="heart" style="left:10%;animation-delay:0s;">💖</div>
+<div class="heart" style="left:25%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:40%;animation-delay:4s;">💗</div>
+<div class="heart" style="left:60%;animation-delay:1s;">💝</div>
+<div class="heart" style="left:80%;animation-delay:3s;">❤️</div>
+
 </body>
+
 </html>
