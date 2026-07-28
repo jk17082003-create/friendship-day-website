@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Secret Friendship Letter</title>
+<title>Secret Friendship Letter 💌</title>
 
 <style>
+
 body{
-  background:#ffe6f2;
-  color:#e0a5cf;
-  font-family:Arial,sans-serif;
-  text-align:center;
-  padding:30px;
+    background:#ffe6f2;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    padding:30px;
+}
+
+.letter{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 5px 20px #ffb6d9;
+}
+
+h1{
+    color:#ff1493;
 }
 
 #letter{
     font-size:22px;
-    line-height:1.8;
     color:#444;
+    line-height:1.8;
     white-space:pre-line;
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 5px 15px #ffb6d9;
+    text-align:left;
 }
 
-h1{
-  color:#ff1493;
+button{
+    background:#ff1493;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:25px;
 }
+
+button:hover{
+    background:#ff3399;
+}
+
 </style>
-
 
 </head>
 
@@ -36,30 +58,29 @@ h1{
 
 <div class="letter">
 
-<h1>💌 Secret Friendship Letter</h1>
+<h1>💌 Secret Friendship Letter 💌</h1>
 
 <p id="letter"></p>
 
-</div>
-<br>
-
 <button onclick="openGallery()">
-Open Friendship Gallery 📸
+📸 Open Friendship Gallery
 </button>
 
-<script>
-function openGallery(){
-  window.location.href = "page5.html";
-}
+</div>
+
 <script>
 
 const text = `Dear Best Friend,
 
 Thank you for always being there for me. ❤️
 
-Every smile, every laugh and every memory with you is a treasure.
+You are one of the most beautiful parts of my life.
 
-No matter where life takes us, our friendship will always stay strong.
+Every smile, every laugh and every memory with you is a treasure that I will always keep in my heart.
+
+No matter where life takes us, our friendship will stay forever.
+
+Thank you for making my life happier and brighter.
 
 Happy Friendship Day! 🌸
 
@@ -67,17 +88,30 @@ Forever Friends... ♾️💖`;
 
 let i = 0;
 
-function typeLetter() {
-    if (i < text.length) {
+function typeLetter(){
+
+    if(i < text.length){
+
         document.getElementById("letter").innerHTML += text.charAt(i);
+
         i++;
-        setTimeout(typeLetter, 45);
+
+        setTimeout(typeLetter,40);
+
     }
+
 }
 
 window.onload = typeLetter;
 
+function openGallery(){
+
+    window.location.href="page5.html";
+
+}
+
 </script>
 
 </body>
+
 </html>
