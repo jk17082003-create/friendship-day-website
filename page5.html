@@ -7,36 +7,42 @@
 <style>
 
 body{
-  background:#111;
-  color:white;
-  font-family:Arial;
-  text-align:center;
-  padding:20px;
+    background:#ffe6f2;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    padding:20px;
 }
 
 h1{
-  color:#ffcc00;
+    color:#ff1493;
 }
 
 .gallery{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
 }
 
 .card{
-  background:#222;
-  padding:15px;
-  border-radius:20px;
-  width:250px;
+    background:white;
+    width:250px;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(255,105,180,0.3);
 }
 
 .card img{
-  width:100%;
-  height:200px;
-  border-radius:15px;
-  object-fit:cover;
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.card p{
+    color:#ff1493;
+    font-size:18px;
+    font-weight:bold;
 }
 
 button{
@@ -49,6 +55,11 @@ button{
     font-size:18px;
     margin-top:30px;
 }
+
+button:hover{
+    background:#e60073;
+}
+
 </style>
 
 </head>
@@ -60,136 +71,39 @@ button{
 <div class="gallery">
 
 <div class="card">
-<img src="photo1.jpg">
+<img src="photo1.jpg" alt="Memory 1">
 <p>Beautiful Memory ✨</p>
 </div>
 
 <div class="card">
-<img src="photo2.jpg">
+<img src="photo2.jpg" alt="Memory 2">
 <p>Special Moment ❤️</p>
 </div>
 
 <div class="card">
-<img src="photo3.jpg">
+<img src="photo3.jpg" alt="Memory 3">
 <p>Forever Memories 💖</p>
 </div>
 
 <div class="card">
-<img src="photo4.jpg">
+<img src="photo4.jpg" alt="Memory 4">
 <p>Crazy Times 😄</p>
 </div>
 
 <div class="card">
-<img src="photo5.jpg">
+<img src="photo5.jpg" alt="Memory 5">
 <p>Best Friendship 🌸</p>
 </div>
 
 <div class="card">
-<img src="photo6.jpg">
+<img src="photo6.jpg" alt="Memory 6">
 <p>Always Together ♾️</p>
 </div>
 
-
 </div>
 
-</div>
+<br>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Happy Friendship Day ❤️</title>
-
-<style>
-body{
-    margin:0;
-    padding:0;
-    background:linear-gradient(135deg,#ffd6e7,#ffeef5);
-    font-family:Arial,sans-serif;
-    text-align:center;
-    overflow:hidden;
-}
-
-.container{
-    margin-top:80px;
-}
-
-h1{
-    color:#ff1493;
-    font-size:45px;
-}
-
-p{
-    font-size:22px;
-    color:#444;
-    padding:0 20px;
-}
-
-button{
-    margin-top:25px;
-    padding:15px 30px;
-    font-size:18px;
-    border:none;
-    border-radius:30px;
-    background:#ff1493;
-    color:white;
-    cursor:pointer;
-}
-
-.heart{
-    position:fixed;
-    font-size:25px;
-    animation:fall 8s linear infinite;
-    top:-10%;
-}
-
-@keyframes fall{
-    from{
-        transform:translateY(-10vh);
-    }
-    to{
-        transform:translateY(110vh);
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>🎉 Happy Friendship Day 🎉</h1>
-
-<p>
-Thank you for being the most beautiful part of my life. ❤️
-</p>
-
-<p>
-No matter where life takes us, our friendship will always remain special. 🌸
-</p>
-
-<h2>Forever Friends ♾️</h2>
-
-<button onclick="restart()">
-🔄 Restart Adventure
-</button>
-
-</div>
-
-<div class="heart" style="left:10%;animation-delay:0s;">💖</div>
-<div class="heart" style="left:25%;animation-delay:2s;">💕</div>
-<div class="heart" style="left:40%;animation-delay:4s;">💗</div>
-<div class="heart" style="left:60%;animation-delay:1s;">💝</div>
-<div class="heart" style="left:80%;animation-delay:3s;">💖</div>
-
-<script>
-function restart(){
-    window.location.href="index.html";
-}
-</script>
-
-
-</body>
-</html>
 <button onclick="finalPage()">🎁 Final Surprise</button>
 
 <script>
@@ -197,5 +111,6 @@ function finalPage(){
     window.location.href="page6.html";
 }
 </script>
+
 </body>
 </html>
