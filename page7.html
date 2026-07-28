@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Best Friend Quiz</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#ffe6f2;
+    text-align:center;
+    padding:30px;
+}
+
+.quiz{
+    background:white;
+    max-width:600px;
+    margin:auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(255,105,180,0.3);
+}
+
+h1{
+    color:#ff1493;
+}
+
+button{
+    background:#ff1493;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
+    cursor:pointer;
+    margin:10px;
+    font-size:16px;
+}
+
+#result{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz">
+
+<h1>💖 Best Friend Quiz 💖</h1>
+
+<h2>Question 1</h2>
+
+<p>Who is the world's best friend? 😊</p>
+
+<button onclick="correct()">You ❤️</button>
+<button onclick="wrong()">Someone Else</button>
+
+<p id="result"></p>
+
+<br>
+
+<button onclick="nextPage()">Next ➜</button>
+
+</div>
+
+<script>
+function correct(){
+    document.getElementById("result").innerHTML="🎉 Correct! You know me so well ❤️";
+}
+
+function wrong(){
+    document.getElementById("result").innerHTML="😜 Oops! Try Again.";
+}
+
+function nextPage(){
+    window.location.href="page8.html";
+}
+</script>
+
+</body>
+</html>
