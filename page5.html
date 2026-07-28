@@ -39,6 +39,16 @@ h1{
   object-fit:cover;
 }
 
+button{
+    background:#ff1493;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    margin-top:30px;
+}
 </style>
 
 </head>
@@ -84,5 +94,107 @@ h1{
 
 </div>
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Friendship Day ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+    font-family:Arial,sans-serif;
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    margin-top:80px;
+}
+
+h1{
+    color:#ff1493;
+    font-size:45px;
+}
+
+p{
+    font-size:22px;
+    color:#444;
+    padding:0 20px;
+}
+
+button{
+    margin-top:25px;
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff1493;
+    color:white;
+    cursor:pointer;
+}
+
+.heart{
+    position:fixed;
+    font-size:25px;
+    animation:fall 8s linear infinite;
+    top:-10%;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎉 Happy Friendship Day 🎉</h1>
+
+<p>
+Thank you for being the most beautiful part of my life. ❤️
+</p>
+
+<p>
+No matter where life takes us, our friendship will always remain special. 🌸
+</p>
+
+<h2>Forever Friends ♾️</h2>
+
+<button onclick="restart()">
+🔄 Restart Adventure
+</button>
+
+</div>
+
+<div class="heart" style="left:10%;animation-delay:0s;">💖</div>
+<div class="heart" style="left:25%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:40%;animation-delay:4s;">💗</div>
+<div class="heart" style="left:60%;animation-delay:1s;">💝</div>
+<div class="heart" style="left:80%;animation-delay:3s;">💖</div>
+
+<script>
+function restart(){
+    window.location.href="index.html";
+}
+</script>
+
+<button onclick="finalPage()">🎁 Final Surprise</button>
+
+<script>
+function finalPage(){
+    window.location.href="page6.html";
+}
+</script>
+</body>
+</html>
 </body>
 </html>
